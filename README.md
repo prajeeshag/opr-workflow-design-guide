@@ -45,50 +45,50 @@ Use the organization's GitHub/Bitbucket account.
 
 ### Branching Strategy
 1. Main Branches
-	•	`main`: This is the production-ready branch. It should always be stable and contain thoroughly tested code.
-	•	`develop`: This branch contains the latest delivered development changes for the next release. It’s a staging area for features and bug fixes before they are merged into the main branch.
+	- `main`: This is the production-ready branch. It should always be stable and contain thoroughly tested code.
+	- `develop`: This branch contains the latest delivered development changes for the next release. It’s a staging area for features and bug fixes before they are merged into the main branch.
 2.	Supporting Branches
 - Feature Branches: Created for new features and enhancements.
-  - Naming: feature/feature-name
+  	- Naming: feature/feature-name
 	- Base: develop
 	- Merge back to: develop
 - Bugfix Branches: Created for bug fixes that are found in the develop branch.
-  - Naming: bugfix/bug-name
+  	- Naming: bugfix/bug-name
 	- Base: develop
 	- Merge back to: develop
 - Hotfix Branches: Created for urgent fixes in the production code.
 	- Naming: hotfix/hotfix-name
-  - Base: main
+  	- Base: main
 	- Merge back to: main and develop
 - Release Branches: Created to prepare for a new production release.
-  - Naming: release/release-name
+  	- Naming: release/release-name
 	- Base: develop
-  - Merge back to: main and develop
+  	- Merge back to: main and develop
     
 3. Workflow
 - Creating a Feature Branch
-  -  Branch off from develop.
+	-  Branch off from develop.
 	- Work on your feature, commit changes, and push to the remote repository.
 - Code Review Process
-  -  Open a Pull Request (PR) from your feature branch to the develop branch.
+	-  Open a Pull Request (PR) from your feature branch to the develop branch.
 	-  Request reviews from team members.
 	- Address any review comments by pushing updates to your feature branch.
 	-  Once approved, merge the PR into develop.
 - Merging Feature Branches
-  - Ensure the feature branch is up-to-date with develop before merging.
+  	- Ensure the feature branch is up-to-date with develop before merging.
 	- Merge the feature branch into develop using a merge commit or rebasing to maintain a clean history.
-  - Delete the feature branch after merging to keep the repository tidy.
+  	- Delete the feature branch after merging to keep the repository tidy.
 - Release Process
-  - When the develop branch is stable and ready for a release, create a release branch.
+  	- When the develop branch is stable and ready for a release, create a release branch.
 	- Perform final testing and bug fixes on the release branch.
-  - Merge the release branch into main and tag the release.
+  	- Merge the release branch into main and tag the release.
 	- Merge the release branch back into develop to ensure any changes are included in future development.
 - Hotfix Process
-  - Create a hotfix branch from main.
+  	- Create a hotfix branch from main.
 	- Apply the necessary fix, commit, and push to the remote repository.
-  - Open a PR from the hotfix branch to main.
+  	- Open a PR from the hotfix branch to main.
 	- After approval, merge the hotfix branch into main and tag the hotfix release.
-  - Merge the hotfix branch back into develop to ensure the fix is included in future development.
+  	- Merge the hotfix branch back into develop to ensure the fix is included in future development.
 
 ## Documentation
 
@@ -100,7 +100,7 @@ Use the organization's GitHub/Bitbucket account.
 
 ### Component Interface Documentation
 - For each component (e.g., WRF, MITGCM, WW3), document the following:
-  1. Compilation procedure
+  1. Compilation procedure, compiler options and environment
   2. Input-output file format, naming conventions, and other relevant information
   3. Input namelists and other relevant parameters
   4. Scripts used
