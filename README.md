@@ -1,5 +1,5 @@
 
-# Operational System Design Guidelines
+# Operational System Design
 
 This document provides design guidelines for an operational weather prediction workflow using the Cylc workflow engine. While the recommendations are based on Cylc, the general concepts also apply to other workflow engines.
 
